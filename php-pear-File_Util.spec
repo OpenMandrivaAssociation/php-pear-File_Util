@@ -53,7 +53,7 @@ pear install --nodeps --soft --force --register-only \
 %if %mdkversion < 201000
 if [ "$1" -eq "0" ]; then
     pear uninstall --nodeps --ignore-errors --register-only \
-        %{upstream_name} >/dev/null || :
+        %{pear_name} >/dev/null || :
 fi
 %endif
 
@@ -62,3 +62,17 @@ fi
 %{_datadir}/pear/%{_class}/Util.php
 %{_datadir}/pear/packages/%{upstream_name}.xml
 
+
+
+%changelog
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-2mdv2011.0
++ Revision: 667499
+- mass rebuild
+
+* Tue Apr 05 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1
++ Revision: 650599
+- import php-pear-File_Util
+
+
+* Tue Apr 05 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1mdv2010.2
+- initial Mandriva package
