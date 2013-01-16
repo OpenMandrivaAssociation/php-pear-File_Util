@@ -1,8 +1,6 @@
 %define		_class		File
 %define		upstream_name	%{_class}_Util
 
-%define		_requires_exceptions pear(PHPUnit.php)
-
 Summary:	Common file and directory utility functions
 Name:		php-pear-%{upstream_name}
 Version:	1.0.0
