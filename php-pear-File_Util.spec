@@ -4,7 +4,7 @@
 Summary:	Common file and directory utility functions
 Name:		php-pear-%{upstream_name}
 Version:	1.0.0
-Release:	%mkrel 3
+Release:	4
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/File_Util/
@@ -15,7 +15,6 @@ Requires:	php-pear
 BuildArch:	noarch
 BuildRequires:	php-pear
 Conflicts:	php-pear-File < 1.4.0
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Common file and directory utility functions. Path handling, temp dir/file,
@@ -26,7 +25,6 @@ sorting of files, listDirs, isIncludable and more.
 mv package.xml %{upstream_name}-%{version}/%{upstream_name}.xml
 
 %install
-rm -rf %{buildroot}
 
 cd %{upstream_name}-%{version}
 pear install --nodeps --packagingroot %{buildroot} %{upstream_name}.xml
@@ -39,7 +37,6 @@ install -d %{buildroot}%{_datadir}/pear/packages
 install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 %clean
-rm -rf %{buildroot}
 
 
 
