@@ -4,7 +4,7 @@
 Summary:	Common file and directory utility functions
 Name:		php-pear-%{upstream_name}
 Version:	1.0.0
-Release:	4
+Release:	5
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/File_Util/
